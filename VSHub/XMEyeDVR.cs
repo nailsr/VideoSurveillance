@@ -217,8 +217,6 @@ namespace VSHub
 
                         m.Write(buf, 0, n);
 
-                        Logger.Debug("DVR: Received " + n.ToString() + " bytes: " + Encoding.UTF8.GetString(buf, 0, n));
-
                         sz -= (uint)n;
                     }
 
@@ -226,6 +224,8 @@ namespace VSHub
                     {
                         UseSimpleDictionaryFormat = true
                     });
+                    
+                    Logger.Debug("DVR: Received " + m.Length.ToString() + " bytes: " + Encoding.UTF8.GetString(m.ToArray()).TrimEnd('\n', '\r', '\0'));                    
 
                     m.Seek(0, System.IO.SeekOrigin.Begin);
 
