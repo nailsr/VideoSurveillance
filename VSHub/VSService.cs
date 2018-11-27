@@ -408,6 +408,10 @@ namespace VSHub
 //                                    context.Response.OutputStream.Flush();
                                 }
                             }
+                            catch (ObjectDisposedException)
+                            { }
+                            catch (HttpListenerException)
+                            { }
                             catch (Exception ex)
                             {
                                 Logger.Error(ex);
