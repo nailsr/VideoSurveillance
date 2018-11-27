@@ -6,4 +6,5 @@ Currently implements communication with XMEye DVR(HDR) in part of a streaming li
 
 
 VSHub - Windows Service
+
 VSMon.UWP - Sample client application for Universal Windows Platform 10.0
