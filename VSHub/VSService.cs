@@ -315,7 +315,13 @@ namespace VSHub
                                                                         try
                                                                         {
                                                                             var dvr = new XMEyeDVR();
+
                                                                             dvr.Connect(device.IPAddr, device.Port, device.Login, device.Password);
+
+                                                                            dvr.OnDisconnected += (s, e) =>
+                                                                            {
+                                                                                devices.Remove(device.Name);
+                                                                            };
 
                                                                             devices.Add(source.DeviceName, dvr);
 

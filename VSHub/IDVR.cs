@@ -12,6 +12,8 @@ namespace VSHub
 
         Channel OpenChannel(int nChannel, string format);
 
+        event EventHandler OnDisconnected;
+
         int NumberOfChannels
         {
             get;
