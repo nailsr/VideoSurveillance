@@ -374,7 +374,7 @@ namespace VSHub
                             var buf = new byte[16384];
 
                             context.Response.StatusCode = 200;
-                            context.Response.ContentType = "video/mp4";
+                            context.Response.ContentType = "video/h264";
 
                             try
                             {
