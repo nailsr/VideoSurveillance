@@ -64,9 +64,11 @@ namespace VSHub
         {
             if (listener != null)
             {
-                listener.Stop();
-                listener.Close();
+                var l = listener;
                 listener = null;
+                
+                l.Stop();
+                l.Close();
             }
         }
 
@@ -88,7 +90,7 @@ namespace VSHub
                 }
                 catch(Exception ex)
                 {
-                    Logger.Error(ex);
+                    if(listener != null) Logger.Error(ex);
                 }
             }
 
