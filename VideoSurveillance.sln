@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSMon.UWP", "VSMon.UWP\VSMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSHub", "VSHub\VSHub.csproj", "{C7850AF8-E5FB-4061-967D-7628B34C74AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{FE0F56B1-0B65-4FAE-95A7-F69E1D94FD55}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\log4net.dll = Libs\log4net.dll
+		Libs\readme = Libs\readme
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command Tools", "Command Tools", "{73B52A3C-65EF-4CD5-8AE9-12DB3AA0C23F}"
+	ProjectSection(SolutionItems) = preProject
+		reg_prefix.cmd = reg_prefix.cmd
+		set_cert.cmd = set_cert.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
