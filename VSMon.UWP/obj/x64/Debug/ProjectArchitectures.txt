@@ -1,1 +1,0 @@
-C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSMon.UWP\VSMon.UWP.csproj;x64
