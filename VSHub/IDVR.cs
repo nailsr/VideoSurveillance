@@ -10,7 +10,7 @@ namespace VSHub
 
         void CloseChannel(Channel ch);
 
-        Channel OpenChannel(int nChannel, string format);
+        Channel OpenChannel(int nChannel, string format, int fps);
 
         event EventHandler OnDisconnected;
 

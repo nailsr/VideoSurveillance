@@ -147,7 +147,7 @@ namespace VSHub
             }
         }
 
-        public Channel OpenChannel(int nChannel, string format)
+        public Channel OpenChannel(int nChannel, string format, int fps)
         {
             if (!connected) throw new Exception("Not connected");
 
@@ -167,7 +167,7 @@ namespace VSHub
 
             Send(s, CMD.OPMONITOR_START_STOP, "{ \"Name\" : \"OPMonitor\", \"OPMonitor\" : { \"Action\" : \"Start\", \"Parameter\" : { \"Channel\" : " + nChannel.ToString() + ", \"CombinMode\" : \"CONNECT_ALL\", \"StreamType\" : \"Main\", \"TransMode\" : \"TCP\" } }, \"SessionID\" : \"0x" + sessionID.ToString("X8") + "\" }\n");
 
-            return new Channel(this) { ID = nChannel, Stream = s, Format = format };
+            return new Channel(this) { ID = nChannel, Stream = s, Format = format, FPS = fps };
         }
 
         private void Send(NetworkStream s, CMD cmdID, string cmd)
@@ -205,7 +205,7 @@ namespace VSHub
                 var p4 = (uint)s.ReadByte() | ((uint)s.ReadByte() << 8) | ((uint)s.ReadByte() << 16) | ((uint)s.ReadByte() << 24);
                 var sz = (uint)s.ReadByte() | ((uint)s.ReadByte() << 8) | ((uint)s.ReadByte() << 16) | ((uint)s.ReadByte() << 24);
 
-                if (sz == 0) return null;
+                if (sz == 0 || sz > 65535) return null;
 
                 var buf = new byte[sz];
 
@@ -224,8 +224,8 @@ namespace VSHub
                     {
                         UseSimpleDictionaryFormat = true
                     });
-                    
-                    Logger.Debug("DVR: Received " + m.Length.ToString() + " bytes: " + Encoding.UTF8.GetString(m.ToArray()).TrimEnd('\n', '\r', '\0'));                    
+
+                    Logger.Debug("DVR: Received " + m.Length.ToString() + " bytes: " + Encoding.UTF8.GetString(m.ToArray()).TrimEnd('\n', '\r', '\0'));
 
                     m.Seek(0, System.IO.SeekOrigin.Begin);
 

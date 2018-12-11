@@ -10,6 +10,8 @@ namespace VSHub
 
         public string Format;
 
+        public int FPS;
+
         public NetworkStream Stream;
 
         public Channel(IDVR dvr)

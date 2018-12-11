@@ -54,7 +54,8 @@
     <Compile Include="Channel.cs" />
     <Compile Include="Configuration\Sources.cs" />
     <Compile Include="Configuration\VSHubConfigurationSectionHandler.cs" />
-    <Compile Include="DVR.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="XMEyeDVR.cs" />
     <Compile Include="IDVR.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ProjectInstaller.cs">

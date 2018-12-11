@@ -12,12 +12,12 @@ namespace VSHub
 
         public List<Channel> OpenedChannels = new List<Channel>();
 
-        public string User;
+        public string UserName;
 
         public Session(string sessionID, string user)
         {
             this.ID = sessionID;
-            this.User = user;
+            this.UserName = user;
         }
 
         public DateTime LastAccess;

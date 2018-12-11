@@ -1,0 +1,10 @@
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\bin\Debug\VSHub.exe.config
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\bin\Debug\VSHub.exe
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\bin\Debug\VSHub.pdb
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.csprojResolveAssemblyReference.cache
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.ProjectInstaller.resources
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.Properties.Resources.resources
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.VSService.resources
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.csproj.GenerateResource.Cache
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.exe
+C:\Users\nail\Source\Repos\nailsr\VideoSurveillance\VSHub\obj\Debug\VSHub.pdb

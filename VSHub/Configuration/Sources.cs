@@ -159,6 +159,19 @@ namespace VSHub.Configuration
             }
         }
 
+        [ConfigurationProperty("fps")]
+        public int FPS
+        {
+            get
+            {
+                return (int)this["fps"];
+            }
+            set
+            {
+                this["fps"] = value;
+            }
+        }
+
         [ConfigurationProperty("", DefaultValue = null, IsDefaultCollection = true)]
         [ConfigurationCollection(typeof(VSHub.Configuration.ACL))]
         public ACL AccessRights { get { return (ACL)base[""]; } }

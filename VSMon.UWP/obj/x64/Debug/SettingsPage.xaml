@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="VSMonitor.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VSMonitor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:ConnectionId='1' x:Name="RootGrid" Margin="12,20,12,12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="Settings" Style="{StaticResource SampleHeaderTextStyle}"/>
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                    <StackPanel x:ConnectionId='2' x:Name="CredentialPanel" Orientation="Vertical" Margin="0,0,0,15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="VS Hub URL:" VerticalAlignment="Center" Width="100" Grid.Column="0" Grid.Row="0"/>
+                            <TextBox x:ConnectionId='5' x:Name="URL" Text="" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="0" />
+                        </Grid>
+                    </StackPanel>
+
+                    <Button x:ConnectionId='3' x:Name="btnRemoveCredentials" Visibility="Collapsed">
+                        <TextBlock>Remove Credentials</TextBlock>
+                    </Button>
+
+                    <Button x:ConnectionId='4' x:Name="btnConnect" Visibility="Collapsed" Margin="0,20,0,0">
+                            <TextBlock>Connect</TextBlock>
+                    </Button>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
+
